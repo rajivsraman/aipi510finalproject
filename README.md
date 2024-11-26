@@ -1,4 +1,4 @@
-# Exploring trends in simulated SABRE-SHEATH dataset
+# Building a dataset of simulated SABRE-SHEATH experiments
 
 - **Author** - Rajiv Raman
 - **Institution** - Duke University
