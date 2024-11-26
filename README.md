@@ -1,4 +1,4 @@
-# Exploring NMR hyperpolarization through simulated SABRE-SHEATH data
+# Exploring trends in simulated SABRE-SHEATH dataset
 
 **Author** - Rajiv Raman
 **Institution** - Duke University
