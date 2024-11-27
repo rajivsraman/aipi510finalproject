@@ -14,7 +14,7 @@ Signal Amplification By Reversible Exchange (SABRE) is a new and inexpensive NMR
 
 Dr. Warren S. Warren's lab at Duke University has developed a robust package in Wolfram Mathematica (DMExFR2) that facilitates highly accurate simulations of SABRE experiments. Because these experiments take time to set up, it is valuable to simulate whether a particular experiment is worthwhile running before carrying it out. As a result, the lab's workflow is expedited significantly, as we can easily determine which experiments are actually worth running. That being said, these simulations can take time to evaluate, especially when working with larger molecules and spin systems. The reason for this time scaling is the large number of matrix dot products that must be computed to propagate our chemical system over time. In particular, these matrices are 2^N x 2^N, where N is the number of spins in the system. Therefore, runtime complexity builds up quickly as each new spin is added. So, while the simulations allow us to avoid experimental burdens, their runtime can be a separate burden by itself.
 
-The burden of SABRE simulation runtime motivated me to build this dataset, which is now publicly available on Kaggle under the CC0 license. By storing previously calculated simulations in a dataset, it becomes possible to approximate new simulation results via extrapolation. So far, 1321 distinct SABRE-SHEATH simulations on a three-spin system have been stored in the dataset. Scripts for data processing and exploratory data analysis are included in this repository, and their functionalities can be tested by running the **test_scripts.py** script in the scripts folder.
+The burden of SABRE simulation runtime motivated me to build this dataset, which is now publicly available on Kaggle (https://www.kaggle.com/datasets/rajivsundarraman/dataset-of-simulated-sabre-sheath-experiments) under the CC0 license. By storing previously calculated simulations in a dataset, it becomes possible to approximate new simulation results via extrapolation. So far, 1321 distinct SABRE-SHEATH simulations on a three-spin system have been stored in the dataset. Scripts for data processing and exploratory data analysis are included in this repository, and their functionalities can be tested by running the **test_scripts.py** script in the scripts folder.
 
 ## Description of Data
 
@@ -43,6 +43,7 @@ After running the **test_scripts.py** file, the results of the power analysis ar
 ## Exploratory Data Analysis
 
 To gain elementary insights into the dataset, code is included in the repository to execute an exploratory data analysis (**exploratory_data_analysis.py**). Running the **test_scripts.py** file will allow you to see the results of the exploratory data analysis:
+
 1. Summary of each column in dataset (count, mean, stdev, minimum, first quartile, median, third quartile, maximum)
 2. Check for any missing values in the dataset
 3. Distributions of the values within each column
@@ -50,6 +51,17 @@ To gain elementary insights into the dataset, code is included in the repository
 
 ## Ethics Statement
 
+The primary goal of this dataset is to improve the efficiency of SABRE-related workflows by providing pre-computed simulation results, offering a data-driven solution to gaining further insights into NMR hyperpolarization while circumventing the burden of starting the simulation from scratch. By documenting the methodology behind the dataset generation, we hope to promote transparency and reproducibility of the data.
 
+The data is sourced from simulations, and it does not contain any personal or sensitive information, which means the dataset does not run into concerns regarding privacy violations. The values that were tested for simulation parameters matching experimental parameters were varied within reasonable ranges, ensuring that each row simulated a somewhat realistic experiment. However, users should be careful to not directly extrapolate this dataset to any real SABRE experiment. It should be understood that this dataset was only generated from a rudimentary three-spin system, so it might not adequately model the quantum dynamics of more complex spin systems. Instead, the dataset should serve as a educational tool for researchers looking to understand the SABRE process more closely.
+
+By promoting the reduction of repetitive computations, this dataset places heavy emphasis on lowering the overall computational energy consumption and encouraging efficient experimentation. The dataset is also publicly available on Kaggle, and access to the data is unrestricted by the CC0 license. So, the dataset is widely available, but it is critical that users on a wide scale know that this dataset cannot serve as a substitute for a real SABRE experiment. Rather, it can serve as a general guide for those trying to solve a problem in a specific SABRE system.
 
 ## License
+
+This dataset is licensed under the **CC0 1.0 Universal (Public Domain Dedication)** license. You are free to use it for any purpose, including commercial use, without asking for permission.
+
+For more details, see the full license text in the LICENSE file or at:
+[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/).
+
+
