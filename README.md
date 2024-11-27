@@ -42,7 +42,11 @@ After running the **test_scripts.py** file, the results of the power analysis ar
 
 ## Exploratory Data Analysis
 
-
+To gain elementary insights into the dataset, code is included in the repository to execute an exploratory data analysis (**exploratory_data_analysis.py**). Running the **test_scripts.py** file will allow you to see the results of the exploratory data analysis:
+1. Summary of each column in dataset (count, mean, stdev, minimum, first quartile, median, third quartile, maximum)
+2. Check for any missing values in the dataset
+3. Distributions of the values within each column
+4. Correlation heatmap of all columns mapped against each other
 
 ## Ethics Statement
 
