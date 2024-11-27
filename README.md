@@ -25,7 +25,7 @@ The dataset is available in CSV format, where each row represents an individual 
 3. kaH (1/s) - associated rate of the parahydrogen to the iridium catalyst
 4. \[Ir]/\[L] - the ratio of concentrations from \[Ir] (catalyst) to \[L] (ligand)
 5. \[Ir]/\[H2] - the ratio of concentrations from \[Ir] (catalyst) to \[H2] (parahydrogen)
-6. runtime (ms) - the total runtime of the SABRE experiment before measuring polarization (in other words, how long do we turn B0 on for?)
+6. runtime (ms) - the total runtime of the SABRE experiment before measuring polarization (how long is B0 turned on for?)
 7. dt (ms) - time step of the simulation (smaller dt means higher accuracy of final result)
 
 For each simulation, the spin system was held constant. It was modeled as a three-spin system, where the first two spins are the hydrides derived from parahydrogen, and the third spin is a single nitrogen-15 nucleus intended to model a target ligand. The scalar J-coupling between the hydrides is -9.2 Hz, and the coupling between the nitrogen-15 and one hydride is -25.41 Hz. These couplings play an important role in determining how polarization builds up on the target nitrogen-15 nucleus, but they were held constant through the entirety of this dataset to ensure through analysis of this specific spin system. Moreover, the nitrogen-15 was set to undergo T1 relaxation with a time constant of 40 s, and the hydrides were set to undergo T1 relaxation with a time constant of 1s. T1 relaxation and J-couplings are important properties of NMR spectroscopy, but lengthy discussion about these characteristics is unnecessary here. It should primarily be understood that these factors were held constant, although they will certainly have an influence on spin polarization buildup.
